@@ -1,52 +1,82 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mali Cerámica</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia Universal</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
-    <h1>Mali Cerámica</h1>
-    <p>Arte y funcionalidad en cerámica artesanal</p>
-    <a href="#contacto" class="cta">Solicitar presupuesto</a>
-  </header>
-
-  <nav>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#productos">Productos</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-
-  <section id="nosotros">
-    <h2>Sobre nosotros</h2>
-    <p>Somos un taller artesanal ubicado en San Salvador de Jujuy. Cada pieza está elaborada a mano con técnicas tradicionales, buscando combinar belleza, simpleza y funcionalidad.</p>
-  </section>
-
-  <section id="productos">
-    <h2>Nuestros productos</h2>
-    <p>Ofrecemos tazas, cuencos, platos, sets de desayuno, macetas decorativas y más. Diseños personalizados y producción por encargo para eventos especiales.</p>
-  </section>
-
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Email: <a href="mailto:maliceramica25@gmail.com">maliceramica25@gmail.com</a></p>
-    <p>Tel: <a href="https://wa.me/5493885720063" target="_blank">3885720063</a></p>
-    <p>Instagram: <a href="https://www.instagram.com/by.mali.ceramica" target="_blank">@by.mali.ceramica</a></p>
-  </section>
-
-  <div class="cta-bottom">
-    <h2>¿Querés una pieza a tu medida?</h2>
-    <a href="https://wa.me/5493885720063">Hablá con nosotras</a>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Mali Cerámica | San Salvador de Jujuy</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <header>
+        <img src="images/logo.png" alt="Logo Historia Universal">
+        <h1>Historia Universal</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#antiguedad">Antigüedad</a></li>
+                <li><a href="#edad-media">Edad Media</a></li>
+                <li><a href="#edad-moderna">Edad Moderna</a></li>
+                <li><a href="#edad-contemporanea">Edad Contemporánea</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#linea-tiempo">Línea de Tiempo</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="buscador">
+            <input type="text" id="searchInput" placeholder="Buscar en el contenido...">
+        </section>
+        <section id="inicio">
+            <h2>Bienvenido a Historia Universal</h2>
+            <p>Este sitio ofrece una visión integral del desarrollo histórico de la humanidad...</p>
+        </section>
+        <section id="antiguedad">
+            <h2>Antigüedad</h2>
+            <img src="images/antiguedad.jpg" alt="Civilizaciones antiguas">
+            <p>La Antigüedad comprende el periodo desde la invención de la escritura hasta la caída de Roma...</p>
+        </section>
+        <section id="edad-media">
+            <h2>Edad Media</h2>
+            <img src="images/edad-media.jpg" alt="Castillo medieval">
+            <p>Fue una era dominada por el feudalismo, la iglesia y los conflictos territoriales...</p>
+        </section>
+        <section id="edad-moderna">
+            <h2>Edad Moderna</h2>
+            <img src="images/edad-moderna.jpg" alt="Revolución científica">
+            <p>Con el Renacimiento, la Reforma y el descubrimiento de nuevos continentes...</p>
+        </section>
+        <section id="edad-contemporanea">
+            <h2>Edad Contemporánea</h2>
+            <img src="images/edad-contemporanea.jpg" alt="Tecnología moderna">
+            <p>Desde la Revolución Francesa hasta la era digital actual...</p>
+        </section>
+        <section id="galeria">
+            <h2>Galería de Eventos Históricos</h2>
+            <div class="gallery">
+                <img src="images/galeria1.jpg" alt="Evento histórico 1">
+                <img src="images/galeria2.jpg" alt="Evento histórico 2">
+                <img src="images/galeria3.jpg" alt="Evento histórico 3">
+                <img src="images/galeria4.jpg" alt="Evento histórico 4">
+            </div>
+        </section>
+        <section id="linea-tiempo">
+            <h2>Línea del Tiempo Histórica</h2>
+            <ul class="timeline">
+                <li><strong>3000 a.C.:</strong> Invención de la escritura</li>
+                <li><strong>476 d.C.:</strong> Caída del Imperio Romano</li>
+                <li><strong>1492:</strong> Descubrimiento de América</li>
+                <li><strong>1789:</strong> Revolución Francesa</li>
+                <li><strong>1914:</strong> Primera Guerra Mundial</li>
+                <li><strong>1939:</strong> Segunda Guerra Mundial</li>
+                <li><strong>1969:</strong> Llegada a la Luna</li>
+                <li><strong>1989:</strong> Caída del Muro de Berlín</li>
+                <li><strong>2020:</strong> Pandemia de COVID-19</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Historia Universal. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
