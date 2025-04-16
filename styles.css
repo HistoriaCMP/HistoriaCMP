@@ -1,0 +1,71 @@
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+}
+header.hero {
+  background: url('hero-producto.jpg') center/cover no-repeat;
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+header.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+header.hero a.cta {
+  background-color: #f08080;
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  background-color: #fafafa;
+  border-bottom: 1px solid #eee;
+}
+nav a {
+  color: #f08080;
+  text-decoration: none;
+  font-weight: 600;
+}
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+section h2 {
+  font-size: 2rem;
+  color: #f08080;
+  margin-bottom: 1rem;
+}
+.cta-bottom {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #f08080;
+  color: white;
+}
+.cta-bottom a {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: white;
+  color: #f08080;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+}
+footer {
+  background-color: #333;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
