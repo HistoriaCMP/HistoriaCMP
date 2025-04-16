@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -6,16 +5,15 @@
 }
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
-    transition: background-color 0.3s ease;
+    line-height: 1.6;
 }
 header {
     background: #2c3e50;
     color: #fff;
-    padding: 20px 0;
     text-align: center;
+    padding: 20px 0;
 }
 header img {
     width: 80px;
@@ -29,7 +27,7 @@ nav ul {
     gap: 20px;
     flex-wrap: wrap;
 }
-nav ul li a {
+nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -49,18 +47,11 @@ section h2 {
 }
 section img {
     width: 100%;
+    border-radius: 10px;
     max-height: 300px;
     object-fit: cover;
     margin-top: 10px;
-    border-radius: 10px;
 }
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #2c3e50;
-    color: white;
-}
-
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -74,13 +65,39 @@ footer {
 .gallery img:hover {
     transform: scale(1.05);
 }
+#buscador {
+    text-align: center;
+    margin-bottom: 30px;
+}
+#searchInput {
+    padding: 10px;
+    width: 90%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+.timeline {
+    list-style: none;
+    padding-left: 20px;
+}
+.timeline li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+}
+.timeline li::before {
+    content: "•";
+    color: #2c3e50;
+    position: absolute;
+    left: 0;
+}
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
-}
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
 }
