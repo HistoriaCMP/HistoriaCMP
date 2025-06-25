@@ -3,80 +3,360 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historia Universal</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>La Fascinante Historia de la Humanidad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background-color: #6b7280;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: -0.5rem;
+            top: 0;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background-color: #4a5568;
+        }
+        
+        .theory-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .theory-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        footer {
+            background-color: #2d3748;
+            color: #e2e8f0;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="Nikos9.png" alt="Historia CMP">
-        <h1>Historia CMP</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#antiguedad">Antigüedad</a></li>
-                <li><a href="#edad-media">Edad Media</a></li>
-                <li><a href="#edad-moderna">Edad Moderna</a></li>
-                <li><a href="#edad-contemporanea">Edad Contemporánea</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#linea-tiempo">Línea de Tiempo</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="buscador">
-            <input type="text" id="searchInput" placeholder="Buscar en el contenido...">
-        </section>
-        <section id="inicio">
-            <h2>Bienvenido a Historia Universal</h2>
-            <p>Este sitio ofrece una visión integral del desarrollo histórico de la humanidad...</p>
-        </section>
-        <section id="antiguedad">
-            <h2>Antigüedad</h2>
-            <img src="Nikos5.jpeg" alt="Civilizaciones antiguas">
-            <p>La Antigüedad comprende el periodo desde la invención de la escritura hasta la caída de Roma...</p>
-        </section>
-        <section id="edad-media">
-            <h2>Edad Media</h2>
-            <img src="Nikos6.jpeg" alt="Castillo medieval">
-            <p>Fue una era dominada por el feudalismo, la iglesia y los conflictos territoriales...</p>
-        </section>
-        <section id="edad-moderna">
-            <h2>Edad Moderna</h2>
-            <img src="Nikos7.jpeg" alt="Revolución científica">
-            <p>Con el Renacimiento, la Reforma y el descubrimiento de nuevos continentes...</p>
-        </section>
-        <section id="edad-contemporanea">
-            <h2>Edad Contemporánea</h2>
-            <img src="Nikos8.jpeg" alt="Tecnología moderna">
-            <p>Desde la Revolución Francesa hasta la era digital actual...</p>
-        </section>
-        <section id="galeria">
-            <h2>Galería de Eventos Históricos</h2>
-            <div class="gallery">
-                <img src="Nikos1.jpeg" alt="Evento histórico 1">
-                <img src="Nikos2.jpeg" alt="Evento histórico 2">
-                <img src="Nikos3.jpeg" alt="Evento histórico 3">
-                <img src="Nikos4.jpeg" alt="Evento histórico 4">
+    <!-- Hero Section -->
+    <section class="hero-section py-32 px-4 md:px-10 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">El Viaje de la Humanidad</h1>
+        <p class="text-xl md:text-2xl max-w-3xl mx-auto">Desde nuestros orígenes en África hasta las primeras civilizaciones americanas</p>
+    </section>
+
+    <!-- Main Content Container -->
+    <div class="container mx-auto px-4 py-12 max-w-6xl">
+        <!-- Origins Section -->
+        <section class="bg-white rounded-xl shadow-lg p-6 mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">Los Orígenes de la Humanidad</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Religious Explanation -->
+                <div class="theory-card bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 class="text-2xl font-semibold mb-4 text-red-600">Perspectiva Religiosa</h3>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                            <span class="text-red-500 text-xl">✝️</span>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Creacionismo</h4>
+                        </div>
+                    </div>
+                    <p class="mb-4">Según las tradiciones religiosas monoteístas (judaísmo, cristianismo, islam), el ser humano fue creado directamente por Dios "a su imagen y semejanza" (Génesis 1:27). Adán y Eva son considerados los primeros padres de la humanidad.</p>
+                    
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                            <span class="text-red-500 text-xl">☯️</span>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Mitologías Orientales</h4>
+                        </div>
+                    </div>
+                    <p>En el hinduismo, los seres humanos emergieron del cuerpo del dios Purusha. En China, la diosa Nüwa creó a los humanos del barro amarillo del río Huang He.</p>
+                </div>
+
+                <!-- Scientific Explanation -->
+                <div class="theory-card bg-blue-50 p-6 rounded-lg border border-blue-200">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-600">Perspectiva Científica</h3>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                            <span class="text-blue-500 text-xl">🔬</span>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Teoría de la Evolución</h4>
+                        </div>
+                    </div>
+                    <p class="mb-4">Charles Darwin propuso en 1859 que los humanos evolucionaron de ancestros primates a través de selección natural. Los fósiles más antiguos de homínidos (Sahelanthropus tchadensis) datan de ~7 millones de años en África.</p>
+                    
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                            <span class="text-blue-500 text-xl">🧬</span>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Eva Mitocondrial</h4>
+                        </div>
+                    </div>
+                    <p class="mt-4">Estudios genéticos muestran que todos los humanos modernos descienden de una población africana que vivió hace ~200,000 años (Eva mitocondrial).</p>
+                </div>
             </div>
         </section>
-        <section id="linea-tiempo">
-            <h2>Línea del Tiempo Histórica</h2>
-            <ul class="timeline">
-                <li><strong>3000 a.C.:</strong> Invención de la escritura</li>
-                <li><strong>476 d.C.:</strong> Caída del Imperio Romano</li>
-                <li><strong>1492:</strong> Descubrimiento de América</li>
-                <li><strong>1789:</strong> Revolución Francesa</li>
-                <li><strong>1914:</strong> Primera Guerra Mundial</li>
-                <li><strong>1939:</strong> Segunda Guerra Mundial</li>
-                <li><strong>1969:</strong> Llegada a la Luna</li>
-                <li><strong>1989:</strong> Caída del Muro de Berlín</li>
-                <li><strong>2020:</strong> Pandemia de COVID-19</li>
-            </ul>
+
+        <!-- Hominization Process -->
+        <section class="bg-white rounded-xl shadow-lg p-6 mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">El Proceso de Hominización</h2>
+            <div class="timeline max-w-3xl mx-auto">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content bg-gray-50 p-5 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">~7-4 millones de años</h3>
+                        <p><strong>Primeros homínidos:</strong> Bipedestación (caminar en dos piernas). Sahelanthropus, Orrorin tugenensis.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content bg-gray-50 p-5 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">~3.5-2.5 millones de años</h3>
+                        <p><strong>Australopithecus:</strong> Fabricación de herramientas sencillas (Olduvai). Primeros indicios de consumo de carne.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content bg-gray-50 p-5 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">~2.5-1.8 millones de años</h3>
+                        <p><strong>Homo habilis:</strong> Mayor capacidad craneal (600-800 cm³). Herramientas más elaboradas (Modo 1).</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content bg-gray-50 p-5 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">~1.8 millones-300,000 años</h3>
+                        <p><strong>Homo erectus:</strong> Uso de fuego, migraciones fuera de África. Tallado de bifaces (Achelense).</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content bg-gray-50 p-5 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">~300,000-30,000 años</h3>
+                        <p><strong>Homo sapiens:</strong> Pensamiento simbólico, arte rupestre, rituales funerarios. Dominio del lenguaje complejo.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-    </main>
-    <footer>
-        <p>© 2025 Historia Universal. Todos los derechos reservados.</p>
-    </footer>
-    <script src="script.js"></script>
+
+        <!-- Peopling of America -->
+        <section class="bg-white rounded-xl shadow-lg p-6 mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">El Poblamiento de América</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Theories -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-700">Principales Teorías</h3>
+                    
+                    <div class="mb-6 p-4 bg-amber-50 border-l-4 border-amber-400">
+                        <h4 class="text-lg font-medium text-amber-700 mb-2">Teoría del Estrecho de Bering (Clovis First)</h4>
+                        <p>Grupos de cazadores cruzaron el puente terrestre de Beringia (~15,000 años AP) desde Siberia hacia Alaska durante la última glaciación.</p>
+                    </div>
+                    
+                    <div class="mb-6 p-4 bg-green-50 border-l-4 border-green-400">
+                        <h4 class="text-lg font-medium text-green-700 mb-2">Teoría Costera</h4>
+                        <p>Migración por vía marítima siguiendo la costa del Pacífico (~16,000-20,000 años AP). Explicaría sitios como Monte Verde en Chile (14,500 AP).</p>
+                    </div>
+                    
+                    <div class="p-4 bg-purple-50 border-l-4 border-purple-400">
+                        <h4 class="text-lg font-medium text-purple-700 mb-2">Teoría Solutrense</h4>
+                        <p>Propone que pobladores europeos del Paleolítico Superior cruzaron el Atlántico (~20,000 años AP). Controvertida y con poco apoyo.</p>
+                    </div>
+                </div>
+                
+                <!-- Map Visualization -->
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center">
+                    <div class="text-center">
+                        <svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background -->
+                            <rect width="300" height="200" fill="#e5e7eb" rx="8" ry="8"/>
+                            
+                            <!-- Continents -->
+                            <path d="M50,50 Q70,80 50,110 Q60,140 40,170 L30,160 Q20,140 30,120 Q20,90 30,70 Q40,60 50,50" fill="#3b82f6" opacity="0.8"/>
+                            <path d="M250,50 Q230,80 250,110 Q240,140 260,170 L270,160 Q280,140 270,120 Q280,90 270,70 Q260,60 250,50" fill="#10b981" opacity="0.8"/>
+                            
+                            <!-- Migration Arrows -->
+                            <path d="M80,100 C110,100 140,90 170,90" stroke="#ef4444" stroke-width="3" fill="none" stroke-dasharray="5,5"/>
+                            <path d="M170,90 L160,85 M170,90 L160,95" stroke="#ef4444" stroke-width="2"/>
+                            
+                            <text x="85" y="85" font-size="12" fill="#1f2937">Siberia</text>
+                            <text x="240" y="85" font-size="12" fill="#1f2937">América</text>
+                            <text x="120" y="115" font-size="10" fill="#ef4444">Migración en Beringia</text>
+                        </svg>
+                        <p class="mt-4 text-gray-600">Rutas hipotéticas del poblamiento americano durante el Pleistoceno</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stone Ages in America -->
+        <section class="bg-white rounded-xl shadow-lg p-6 mb-12">
+            <h2 class="text-3xl font-bold mb-8 text-center">El Paleolítico y Neolítico en América</h2>
+            
+            <div class="grid lg:grid-cols-2 gap-8 mb-8">
+                <!-- Paleolítico -->
+                <div class="bg-stone-50 p-6 rounded-lg border border-stone-200">
+                    <h3 class="text-2xl font-semibold mb-4 text-stone-700">Periodo Paleolítico (15,000-8,000 a.C.)</h3>
+                    <div class="space-y-4">
+                        <div class="flex">
+                            <div class="mr-4 text-2xl">🔪</div>
+                            <div>
+                                <h4 class="font-medium">Cultura Clovis</h4>
+                                <p class="text-sm text-gray-600">Puntas de lanza características encontradas en todo Norteamérica (~13,500-12,900 AP).</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="mr-4 text-2xl">🦣</div>
+                            <div>
+                                <h4 class="font-medium">Megafauna</h4>
+                                <p class="text-sm text-gray-600">Caza de mamuts, mastodontes y otros grandes animales hoy extintos.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="mr-4 text-2xl">🏹</div>
+                            <div>
+                                <h4 class="font-medium">Adaptaciones</h4>
+                                <p class="text-sm text-gray-600">Nomadismo, herramientas líticas, primeros indicios de arte mobiliar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Neolítico -->
+                <div class="bg-green-50 p-6 rounded-lg border border-green-200">
+                    <h3 class="text-2xl font-semibold mb-4 text-green-700">Periodo Neolítico (8,000-2,000 a.C.)</h3>
+                    <div class="space-y-4">
+                        <div class="flex">
+                            <div class="mr-4 text-2xl">🌽</div>
+                            <div>
+                                <h4 class="font-medium">Domesticación</h4>
+                                <p class="text-sm text-gray-600">Maíz, frijol, calabaza, papa, quinoa, entre otros cultivos mesoamericanos y andinos.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="mr-4 text-2xl">🏠</div>
+                            <div>
+                                <h4 class="font-medium">Aldeas sedentarias</h4>
+                                <p class="text-sm text-gray-600">Sitios como Guilá Naquitz (Oaxaca) muestran transición a vida sedentaria (~8,000 AP).</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="mr-4 text-2xl">🏺</div>
+                            <div>
+                                <h4 class="font-medium">Cerámica</h4>
+                                <p class="text-sm text-gray-600">Primeras manifestaciones en Valdivia (Ecuador, ~3,500 AC) y Puerto Hormiga (Colombia).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cultural Developments -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-gray-700">Desarrollos Culturales Clave</h3>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-blue-700">Arcaico Tardío (3,000-1,800 AC)</h4>
+                        <ul class="list-disc list-inside text-sm mt-2">
+                            <li>
+                                <strong class="font-semibold">Surgimiento de Centros Ceremoniales:</strong> Complejos arquitectónicos con fines religiosos y administrativos.
+                            </li>
+                            <li>
+                                <strong class="font-semibold">Caral (Perú):</strong> Considerada la ciudad más antigua de América (2,600-2,000 AC), con pirámides, plazas y anfiteatros.
+                            </li>
+                            <li>
+                                <strong class="font-semibold">Organización Social Compleja:</strong> Evidencia de jerarquías, especialización laboral y una incipiente administración.
+                            </li>
+                            <li>
+                                <strong class="font-semibold">Desarrollo Agrícola Avanzado:</strong> Perfeccionamiento de técnicas de cultivo y manejo de recursos hídricos.
+                            </li>
+                            <li>
+                                <strong class="font-semibold">Intercambio a Larga Distancia:</strong> Redes de comercio de bienes y conocimientos entre diferentes comunidades.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-purple-700">Preclásico Temprano (2,500-1,200 AC)</h4>
+                        <ul class="list-disc list-inside text-sm mt-2">
+                            <li>
+                                <strong class="font-semibold">Emergencia de Sociedades Complejas:</strong> Transición de aldeas a centros más grandes y organizados.
+                            </li>
+                            <li>
+                                <strong class="font-semibold">Cultura Olmeca (1,200-400 AC):</strong> Considerada la "cultura madre" de Mesoamérica, influyendo en posteriores civilizaciones.
+                            </li>
+                            <li>
+                                <strong class="font-semibold">Centros Ceremoniales Olmecas:</strong> San Lorenzo y La Venta, con arquitectura monumental y esculturas colosales (cabezas olmecas).
+                            </li>
+                            <li>
+                                <strong class="font-semibold">Inicio de Sistemas de Escritura y Calendario:</strong> Primeros indicios de glifos y conteo del tiempo en Mesoamérica.
+                            </li>
+                            <li>
+                                <strong class="font-semibold">Desarrollo de una Iconografía Religiosa:</strong> Deidades y símbolos que se replicarían en culturas posteriores.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-amber-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-amber-700">Primeros Estados de América</h4>
+                        <ul class="list-disc list-inside text-sm mt-2">
+                            <li>
+                                <strong class="font-semibold">Olmecas (1200-400 a.C.):</strong> "Cultura madre" de Mesoamérica, centros ceremoniales (San Lorenzo, La Venta), cabezas colosales.
+                            </li>
+                            <li>
+                                <strong class="font-semibold">Chavín (900-200 a.C.):</strong> Centro religioso andino, arte felino/serpentino, difusión agrícola y metalúrgica.
+                            </li>
+                            <li>
+                                <strong class="font-semibold">Zapotecas (500 a.C. - 900 d.C.):</strong> Monte Albán, ciudad-estado, escritura jeroglífica, calendario.
+                            </li>
+                            <li>
+                                <strong class="font-semibold">Nazca (100 a.C. - 800 d.C.):</strong> Líneas de Nazca, cerámica policromada, sistemas de irrigación (puquios).
+                            </li>
+                            <li>
+                                <strong class="font-semibold">Moche (100 d.C. - 800 d.C.):</strong> Estado teocrático-militar, metalurgia avanzada, cerámica realista, pirámides de adobe.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
